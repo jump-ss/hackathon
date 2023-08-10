@@ -96,6 +96,7 @@ GEM
     erubi (1.12.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    highline (2.1.0)
     http-accept (1.7.0)
     http-cookie (1.0.5)
       domain_name (~> 0.5)
@@ -245,6 +246,7 @@ DEPENDENCIES
   capybara
   debug
   dotenv-rails
+  highline
   importmap-rails
   jbuilder
   puma (~> 5.0)
