@@ -1,0 +1,22 @@
+<!-- app/views/game/index.html.erb -->
+<textarea id="console" readonly></textarea>
+<input type="text" id="command_input">
+<button id="submit_command">送信</button>
+
+<script>
+$(document).ready(function() {
+  $('#submit_command').click(function() {
+    var command = $('#command_input').val();
+    $.ajax({
+      url: '/game/process_command',
+      type: 'POST',
+      data: { command: command },
+      success: function(data) {
+        $('#console').append('\n' + '> ' + command);
+        $('#console').append('\n' + data.result);
+        $('#command_input').val('');
+      }
+    });
+  });
+});
+</script>

@@ -76,3 +76,5 @@ gem 'dotenv-rails'
 gem 'rack-utf8_sanitizer'
 
 gem 'rack-cors'
+
+gem 'highline'
